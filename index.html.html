@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ernest & Rosemary Wedding</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family: Georgia, serif;
+background:#f2ede7;
+color:#111;
+overflow-x:hidden;
+}
+
+.screen{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+padding:20px;
+text-align:center;
+}
+
+.hidden{
+display:none;
+}
+
+.hero-title{
+font-size:4rem;
+font-style:italic;
+margin-bottom:20px;
+}
+
+.subtitle{
+font-size:1.2rem;
+margin-bottom:30px;
+}
+
+.envelope{
+width:320px;
+cursor:pointer;
+transition:transform .3s ease;
+}
+
+.envelope:hover{
+transform:scale(1.03);
+}
+
+.section{
+padding:80px 20px;
+max-width:1100px;
+margin:auto;
+text-align:center;
+}
+
+.section h2{
+font-size:3rem;
+margin-bottom:25px;
+font-style:italic;
+}
+
+.story{
+line-height:1.8;
+font-size:1.1rem;
+max-width:800px;
+margin:auto;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+
+.timeline{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:40px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.button{
+display:inline-block;
+padding:14px 28px;
+background:#6d4aa2;
+color:white;
+text-decoration:none;
+border-radius:50px;
+margin-top:20px;
+}
+
+.footer{
+padding:60px 20px;
+text-align:center;
+font-size:1rem;
+}
+
+.main-banner{
+width:100%;
+height:70vh;
+background:url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1400&auto=format&fit=crop') center/cover;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+.main-banner h1{
+font-size:5rem;
+background:rgba(0,0,0,.4);
+padding:20px 40px;
+border-radius:12px;
+}
+
+@media(max-width:768px){
+
+.hero-title{
+font-size:2.5rem;
+}
+
+.main-banner h1{
+font-size:2.5rem;
+}
+
+.section h2{
+font-size:2rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<section class="screen" id="screen1">
+<h1 class="hero-title">Ernest & Rosemary</h1>
+<p class="subtitle">(Tap on the envelope to open!)</p>
+
+<img class="envelope" id="openEnvelope"
+src="https://cdn-icons-png.flaticon.com/512/561/561127.png">
+</section>
+
+<section class="screen hidden" id="screen2">
+<h1 class="hero-title">You're Invited</h1>
+<p class="subtitle">to the wedding</p>
+
+<img class="envelope" id="openInvite"
+src="https://cdn-icons-png.flaticon.com/512/2099/2099199.png">
+
+<p style="margin-top:20px;">(Click on the letter to proceed!)</p>
+</section>
+
+<div id="mainSite" class="hidden">
+
+<section class="main-banner">
+<div>
+<h1>Ernest & Rosemary</h1>
+<p>October 23, 2027 • Tampa, Florida</p>
+</div>
+</section>
+
+<section class="section">
+<h2>Our Story</h2>
+
+<p class="story">
+Ernest and Rosemary met through mutual friends in 2020.
+What began simply became something real.
+They built their relationship on faith, growth, honesty, and love.
+In November 2025, Ernest proposed surrounded by loved ones.
+Now they are excited to celebrate this next chapter together.
+</p>
+</section>
+
+<section class="section">
+<h2>Wedding Details</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>Ceremony</h3>
+<p>St. Mark Evangelist Catholic Church</p>
+<p>October 23, 2027</p>
+<p>3:30 PM</p>
+<a href="#" class="button">View Map</a>
+</div>
+
+<div class="card">
+<h3>Reception</h3>
+<p>The Venetian Event Center</p>
+<p>October 23, 2027</p>
+<p>6:00 PM</p>
+<a href="#" class="button">View Map</a>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Timeline</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>1:00 PM</h3>
+<p>Ceremony Begins</p>
+</div>
+
+<div class="card">
+<h3>5:30 PM</h3>
+<p>Cocktail Hour</p>
+</div>
+
+<div class="card">
+<h3>6:00 PM</h3>
+<p>Reception Begins</p>
+</div>
+
+<div class="card">
+<h3>8:30 PM</h3>
+<p>Dancing & Celebration</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Gallery</h2>
+
+<div class="gallery">
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=1200&auto=format&fit=crop">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop">
+</div>
+</section>
+
+<section class="section">
+<h2>Dress Code</h2>
+
+<p class="story">
+Guests are invited to dress elegantly.
+Ladies should wear olive green gele/head-tie.
+Gentlemen should wear olive green fila/cap.
+Please contact Rosemary for ordering details.
+</p>
+</section>
+
+<section class="section">
+<h2>RSVP</h2>
+
+<p class="story">
+Please confirm your attendance by May 15, 2027.
+</p>
+
+<a href="#" class="button">RSVP Here</a>
+</section>
+
+<section class="section">
+<h2>Registry</h2>
+
+<p class="story">
+Your presence is the greatest gift to us.
+For those who would like to give, gifts are welcome on the wedding day.
+</p>
+
+<a href="#" class="button">View Registry</a>
+</section>
+
+<section class="section">
+<h2>Our Culture</h2>
+
+<p class="story">
+Our celebration reflects our Nigerian heritage through tradition, music, family, and culture.
+Both the church wedding and traditional ceremony will take place on the same day.
+</p>
+</section>
+
+<section class="footer">
+<p>Thank you for being part of our story.</p>
+<p>#RNE2027</p>
+</section>
+
+</div>
+
+<script>
+
+const screen1 = document.getElementById('screen1');
+const screen2 = document.getElementById('screen2');
+const mainSite = document.getElementById('mainSite');
+
+document.getElementById('openEnvelope').onclick = () => {
+screen1.classList.add('hidden');
+screen2.classList.remove('hidden');
+}
+
+document.getElementById('openInvite').onclick = () => {
+screen2.classList.add('hidden');
+mainSite.classList.remove('hidden');
+window.scrollTo(0,0);
+}
+
+</script>
+
+</body>
+</html>
